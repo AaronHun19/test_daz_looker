@@ -49,6 +49,12 @@ explore: customer {
     type: left_outer
   }
 
+  join: customer_download_log {
+    relationship: one_to_many
+    sql_on: ${customer.customer_id} = ${customer_download_log.customer_id} ;;
+    type: left_outer
+  }
+
 }
 
 explore: product {
@@ -106,6 +112,12 @@ explore: product {
   join: customer_wishlist {
     relationship: one_to_many
     sql_on: ${product.product_id} = ${customer_wishlist.product_id} ;;
+    type: left_outer
+  }
+
+  join: customer_download_log {
+    relationship: one_to_many
+    sql_on: ${product.product_id} = ${customer_download_log.product_id} ;;
     type: left_outer
   }
 
