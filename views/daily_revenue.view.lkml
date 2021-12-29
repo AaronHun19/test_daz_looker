@@ -37,6 +37,12 @@ view: daily_revenue {
     value_format_name: usd_0
   }
 
+  measure: average_revenue {
+    type: average
+    sql: ${revenue} ;;
+    value_format_name: usd_0
+  }
+
   measure: total_revenue_goal {
     type: sum
     sql: ${revenue_goal} ;;
