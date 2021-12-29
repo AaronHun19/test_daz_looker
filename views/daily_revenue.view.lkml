@@ -42,4 +42,8 @@ view: daily_revenue {
     sql: ${revenue_goal} ;;
     value_format_name: usd_0
   }
+
+  measure: count {
+    type: count
+  }
 }
