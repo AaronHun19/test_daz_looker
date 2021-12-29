@@ -202,6 +202,7 @@ view: order {
   measure: average_gross_revenue {
     type: average
     sql: ${gross_revenue} ;;
+    value_format_name: usd
   }
 
   # ----- Sets of fields for drilling ------
