@@ -199,6 +199,11 @@ view: order {
     sql: ${customer_id} ;;
   }
 
+  measure: average_gross_revenue {
+    type: average
+    sql: ${gross_revenue} ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
