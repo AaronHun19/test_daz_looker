@@ -26,4 +26,10 @@ view: hourly_revenue_yesterday {
     type: count
     drill_fields: []
   }
+
+  measure: total_revenue {
+    type: sum
+    sql: ${revenue} ;;
+    value_format_name: usd
+  }
 }
