@@ -11,6 +11,7 @@ view: order_item {
   dimension: order_item_id {
     type: string
     sql: ${TABLE}.OrderItemID ;;
+    primary_key: yes
   }
 
   dimension: product_id {
