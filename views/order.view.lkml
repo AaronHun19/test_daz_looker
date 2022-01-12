@@ -39,10 +39,15 @@ view: order {
     sql: ${TABLE}.Company ;;
   }
 
-  dimension: country {
+  dimension: country_id {
     type: string
     map_layer_name: countries
-    sql: ${TABLE}.Country ;;
+    sql: ${TABLE}.CountryID ;;
+  }
+
+  dimension: country_name {
+    type: string
+    sql: ${TABLE}.CountryName ;;
   }
 
   dimension: coupon_code {
@@ -139,9 +144,15 @@ view: order {
     sql: ${TABLE}.Shipping ;;
   }
 
-  dimension: state {
+  dimension: state_id {
     type: string
-    sql: ${TABLE}.State ;;
+    sql: ${TABLE}.StateID ;;
+  }
+
+  dimension: state_name {
+    type: string
+    map_layer_name: us_states
+    sql: ${TABLE}.StateName ;;
   }
 
   dimension: status {
