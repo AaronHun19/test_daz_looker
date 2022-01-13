@@ -55,6 +55,18 @@ explore: customer {
     type: left_outer
   }
 
+  join: split_test_assignment {
+    relationship: one_to_many
+    sql_on: ${customer.customer_id} = ${split_test_assignment.person_id} ;;
+    type: left_outer
+  }
+
+  join: split_test {
+    relationship: one_to_one
+    sql_on: ${split_test_assignment.split_test_id} = ${split_test.split_test_id} AND ${split_test_assignment.group_name} = ${split_test.group_name};;
+    type: left_outer
+  }
+
 }
 
 explore: product {
