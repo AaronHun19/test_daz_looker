@@ -57,7 +57,7 @@ explore: customer {
 
   join: split_test_assignment {
     relationship: one_to_many
-    sql_on: ${customer.customer_id} = ${split_test_assignment.person_id} ;;
+    sql_on: ${customer.customer_id} = ${split_test_assignment.customer_id} ;;
     type: left_outer
   }
 
