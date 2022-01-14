@@ -21,9 +21,9 @@ view: split_test_assignment {
     sql: ${TABLE}.GroupName ;;
   }
 
-  dimension: person_id {
+  dimension: customer_id {
     type: number
-    sql: ${TABLE}.PersonID ;;
+    sql: ${TABLE}.CustomerID ;;
   }
 
   dimension: split_test_id {
