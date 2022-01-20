@@ -7,6 +7,7 @@ view: customer {
     primary_key: yes
     type: number
     sql: ${TABLE}.CustomerID ;;
+    value_format_name: id
   }
 
   dimension: confirmed {
@@ -104,11 +105,13 @@ view: customer {
   dimension: revenue1_year {
     type: number
     sql: ${TABLE}.Revenue1Year ;;
+    value_format_name: usd
   }
 
   dimension: revenue_lifetime {
     type: number
     sql: ${TABLE}.RevenueLifetime ;;
+    value_format_name: usd
   }
 
   dimension: signed_eulaversion {

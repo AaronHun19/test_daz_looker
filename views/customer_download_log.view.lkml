@@ -104,6 +104,7 @@ view: customer_download_log {
   dimension: customer_id {
     type: number
     sql: ${TABLE}.CustomerID ;;
+    value_format_name: id
   }
 
   dimension: encrypted_download_count {

@@ -20,11 +20,13 @@ view: product_vendor {
   dimension: product_id {
     type: number
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   dimension: vendor_id {
     type: number
     sql: ${TABLE}.VendorID ;;
+    value_format_name: id
   }
 
   dimension: vendor_name {

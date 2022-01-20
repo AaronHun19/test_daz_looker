@@ -5,11 +5,13 @@ view: customer_store_credit {
   dimension: balance {
     type: number
     sql: ${TABLE}.Balance ;;
+    value_format_name: usd
   }
 
   dimension: customer_id {
     type: number
     sql: ${TABLE}.CustomerID ;;
+    value_format_name: id
   }
 
   dimension_group: recent_credit {

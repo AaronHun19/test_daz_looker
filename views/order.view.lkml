@@ -22,6 +22,7 @@ view: order {
   dimension: charge_total {
     type: number
     sql: ${TABLE}.ChargeTotal ;;
+    value_format_name: usd
   }
 
   dimension: checkout_type {
@@ -64,11 +65,13 @@ view: order {
     type: number
     # hidden: yes
     sql: ${TABLE}.CustomerID ;;
+    value_format_name: id
   }
 
   dimension: discount {
     type: number
     sql: ${TABLE}.Discount ;;
+    value_format_name: usd
   }
 
   dimension: first_name {
@@ -79,21 +82,25 @@ view: order {
   dimension: gift_card_amount {
     type: number
     sql: ${TABLE}.GiftCardAmount ;;
+    value_format_name: usd
   }
 
   dimension: gift_card_cost {
     type: number
     sql: ${TABLE}.GiftCardCost ;;
+    value_format_name: usd
   }
 
   dimension: grand_total {
     type: number
     sql: ${TABLE}.GrandTotal ;;
+    value_format_name: usd
   }
 
   dimension: gross_revenue {
     type: number
     sql: ${TABLE}.GrossRevenue ;;
+    value_format_name: usd
   }
 
   dimension: last_name {
@@ -137,6 +144,7 @@ view: order {
   dimension: refund_amount {
     type: number
     sql: ${TABLE}.RefundAmount ;;
+    value_format_name: usd
   }
 
   dimension: shipping {
@@ -163,16 +171,19 @@ view: order {
   dimension: store_credit_used {
     type: number
     sql: ${TABLE}.StoreCreditUsed ;;
+    value_format_name: usd
   }
 
   dimension: sub_total {
     type: number
     sql: ${TABLE}.SubTotal ;;
+    value_format_name: usd
   }
 
   dimension: tax {
     type: number
     sql: ${TABLE}.Tax ;;
+    value_format_name: usd
   }
 
   dimension: tax_location {
@@ -188,6 +199,7 @@ view: order {
   dimension: transaction_id {
     type: string
     sql: ${TABLE}.TransactionID ;;
+    value_format_name: id
   }
 
   dimension: zip_code {
@@ -198,6 +210,7 @@ view: order {
   dimension: dormant_days {
     type: number
     sql: Date_Diff(${purchase_date},${prior_purchase_date},DAY) ;;
+    value_format_name: decimal_0
   }
 
   measure: count {
@@ -208,6 +221,7 @@ view: order {
   measure: buyer_count {
     type: count_distinct
     sql: ${customer_id} ;;
+    value_format_name: decimal_0
   }
 
   measure: average_gross_revenue {

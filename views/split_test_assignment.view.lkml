@@ -24,11 +24,13 @@ view: split_test_assignment {
   dimension: customer_id {
     type: number
     sql: ${TABLE}.CustomerID ;;
+    value_format_name: id
   }
 
   dimension: split_test_id {
     type: number
     sql: ${TABLE}.SplitTestID ;;
+    value_format_name: id
   }
 
   dimension: test_assigned_id {

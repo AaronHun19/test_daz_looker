@@ -10,6 +10,7 @@ view: product_compat_software {
   dimension: product_id {
     type: number
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   measure: count {

@@ -10,11 +10,13 @@ view: product_sub_product {
   dimension: parent_product_id {
     type: number
     sql: ${TABLE}.ParentProductID ;;
+    value_format_name: id
   }
 
   dimension: sub_product_id {
     type: number
     sql: ${TABLE}.SubProductID ;;
+    value_format_name: id
   }
 
   measure: count {

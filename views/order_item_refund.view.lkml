@@ -11,17 +11,20 @@ view: order_item_refund {
   dimension: order_item_id {
     type: string
     sql: ${TABLE}.OrderItemID ;;
+    value_format_name: id
   }
 
   dimension: product_id {
     type: number
     # hidden: yes
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   dimension: refund_amount {
     type: number
     sql: ${TABLE}.RefundAmount ;;
+    value_format_name: usd
   }
 
   dimension_group: refund {

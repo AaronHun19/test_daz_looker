@@ -10,6 +10,7 @@ view: product_genre {
   dimension: product_id {
     type: number
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   measure: count {

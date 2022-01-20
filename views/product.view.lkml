@@ -7,11 +7,13 @@ view: product {
     primary_key: yes
     type: number
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   dimension: game_license_price {
     type: number
     sql: ${TABLE}.GameLicensePrice ;;
+    value_format_name: usd
   }
 
   dimension: is_active {
@@ -62,26 +64,31 @@ view: product {
   dimension: launch_sales1_day {
     type: number
     sql: ${TABLE}.LaunchSales1Day ;;
+    value_format_name: usd
   }
 
   dimension: launch_sales30_day {
     type: number
     sql: ${TABLE}.LaunchSales30Day ;;
+    value_format_name: usd
   }
 
   dimension: launch_sales60_day {
     type: number
     sql: ${TABLE}.LaunchSales60Day ;;
+    value_format_name: usd
   }
 
   dimension: launch_sales90_day {
     type: number
     sql: ${TABLE}.LaunchSales90Day ;;
+    value_format_name: usd
   }
 
   dimension: launch_sales_lifetime {
     type: number
     sql: ${TABLE}.LaunchSalesLifetime ;;
+    value_format_name: usd
   }
 
   dimension_group: launch {
@@ -106,11 +113,13 @@ view: product {
   dimension: product_price {
     type: number
     sql: ${TABLE}.ProductPrice ;;
+    value_format_name: usd
   }
 
   dimension: sku {
     type: string
     sql: ${TABLE}.SKU ;;
+    value_format_name: id
   }
 
   measure: count {

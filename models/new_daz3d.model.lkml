@@ -147,3 +147,37 @@ explore: hourly_revenue_yesterday {
 explore: daily_revenue {
   group_label: "New - Daz 3D"
 }
+
+explore: sale_promo {
+  label: "Sale Promotions"
+  group_label: "New - Daz 3D"
+
+  join: sale_promo_rule {
+    relationship: one_to_many
+    sql_on: ${sale_promo.promo_id} = ${sale_promo_rule.promo_id};;
+    type: left_outer
+    }
+
+  join: sale_promo_rule_discount {
+    relationship: one_to_many
+    sql_on: ${sale_promo_rule.rule_id} = ${sale_promo_rule_discount.rule_id};;
+    type: left_outer
+  }
+}
+
+explore: sale_promo_coupon {
+  label: "Sale Promotion Coupons"
+  group_label: "New - Daz 3D"
+
+  join: sale_promo_coupon_use {
+    relationship: one_to_many
+    sql_on: ${sale_promo_coupon.coupon_code} = ${sale_promo_coupon_use.coupon_code};;
+    type: left_outer
+  }
+
+  join: customer {
+    relationship: many_to_one
+    sql_on: ${sale_promo_coupon_use.customer_id} = ${customer.customer_id};;
+    type: left_outer
+  }
+}

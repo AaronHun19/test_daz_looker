@@ -5,11 +5,13 @@ view: product_addon {
   dimension: price {
     type: number
     sql: ${TABLE}.Price ;;
+    value_format_name: usd
   }
 
   dimension: product_id {
     type: number
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   dimension: type {

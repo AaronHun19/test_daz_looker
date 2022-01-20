@@ -15,6 +15,7 @@ view: hourly_revenue_yesterday {
   dimension: revenue {
     type: number
     sql: ${TABLE}.Revenue ;;
+    value_format_name: usd
   }
 
   dimension: time_formatted {

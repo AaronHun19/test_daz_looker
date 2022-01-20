@@ -58,6 +58,7 @@ view: split_test {
   dimension: split_test_id {
     type: number
     sql: ${TABLE}.SplitTestID ;;
+    value_format_name: id
   }
 
   dimension_group: start {

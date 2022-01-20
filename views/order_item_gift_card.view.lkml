@@ -5,11 +5,13 @@ view: order_item_gift_card {
   dimension: gift_card_amount {
     type: number
     sql: ${TABLE}.GiftCardAmount ;;
+    value_format_name: usd
   }
 
   dimension: gift_card_cost {
     type: number
     sql: ${TABLE}.GiftCardCost ;;
+    value_format_name: usd
   }
 
   dimension: order_id {
@@ -21,12 +23,14 @@ view: order_item_gift_card {
   dimension: order_item_id {
     type: string
     sql: ${TABLE}.OrderItemID ;;
+    value_format_name: id
   }
 
   dimension: product_id {
     type: number
     # hidden: yes
     sql: ${TABLE}.ProductID ;;
+    value_format_name: id
   }
 
   dimension_group: purchase {
@@ -46,6 +50,7 @@ view: order_item_gift_card {
   dimension: units {
     type: number
     sql: ${TABLE}.Units ;;
+    value_format_name: decimal_0
   }
 
   measure: count {
