@@ -5,6 +5,7 @@ view: sale_promo_coupon {
   dimension: coupon_code {
     type: string
     sql: ${TABLE}.CouponCode ;;
+    primary_key: yes
   }
 
   dimension_group: end {

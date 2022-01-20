@@ -10,6 +10,7 @@ view: sale_promo_rule_discount {
   dimension: rule_discount_id {
     type: string
     sql: ${TABLE}.RuleDiscountID ;;
+    primary_key: yes
   }
 
   dimension: rule_id {

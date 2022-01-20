@@ -120,6 +120,7 @@ view: sale_promo {
   dimension: promo_id {
     type: number
     sql: ${TABLE}.PromoID ;;
+    primary_key: yes
     value_format_name: id
   }
 

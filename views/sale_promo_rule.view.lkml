@@ -11,6 +11,7 @@ view: sale_promo_rule {
   dimension: rule_id {
     type: string
     sql: ${TABLE}.RuleID ;;
+    primary_key: yes
   }
 
   dimension: rule_name {
