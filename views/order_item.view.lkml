@@ -51,6 +51,11 @@ view: order_item {
     sql: ${gross_sales} ;;
   }
 
+  measure:  average_gross_sales{
+    type: average
+    sql: ${gross_sales} ;;
+  }
+
   measure:  total_units{
     type: sum
     sql: ${units} ;;
