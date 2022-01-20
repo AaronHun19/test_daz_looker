@@ -16,6 +16,7 @@ view: sale_promo_coupon_use {
   dimension: order_id {
     type: string
     sql: ${TABLE}.OrderID ;;
+    primary_key: yes
   }
 
   measure: count {
