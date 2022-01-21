@@ -180,4 +180,10 @@ explore: sale_promo_coupon {
     sql_on: ${sale_promo_coupon_use.customer_id} = ${customer.customer_id};;
     type: left_outer
   }
+
+  join: order {
+    relationship: one_to_many
+    sql_on: ${sale_promo_coupon_use.order_id} = ${order.order_id} ;;
+    type: left_outer
+  }
 }

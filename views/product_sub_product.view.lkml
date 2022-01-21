@@ -2,6 +2,20 @@ view: product_sub_product {
   sql_table_name: `infrastructure-162422.Majento.ProductSubProduct`
     ;;
 
+  dimension_group: parent_launch {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.ParentLaunchTime ;;
+  }
+
   dimension: parent_name {
     type: string
     sql: ${TABLE}.ParentName ;;

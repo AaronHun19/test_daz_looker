@@ -230,6 +230,12 @@ view: order {
     value_format_name: usd
   }
 
+  measure: total_gross_revenue {
+    type: sum
+    sql: ${gross_revenue} ;;
+    value_format_name: usd
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
