@@ -33,8 +33,80 @@ view: product_sub_product {
     value_format_name: id
   }
 
+  dimension: launch_sales1_day {
+    type: number
+    sql: ${TABLE}.LaunchSales1Day ;;
+    hidden: yes
+  }
+
+  dimension: launch_sales30_day {
+    type: number
+    sql: ${TABLE}.LaunchSales30Day ;;
+    hidden: yes
+  }
+
+  dimension: launch_sales60_day {
+    type: number
+    sql: ${TABLE}.LaunchSales60Day ;;
+    hidden: yes
+  }
+
+  dimension: launch_sales90_day {
+    type: number
+    sql: ${TABLE}.LaunchSales90Day ;;
+    hidden: yes
+  }
+
+  dimension: launch_sales_lifetime {
+    type: number
+    sql: ${TABLE}.LaunchSalesLifetime ;;
+    hidden: yes
+  }
+
+  dimension: launch_units_lifetime {
+    type: number
+    sql: ${TABLE}.LaunchUnitsLifetime ;;
+    hidden: yes
+  }
+
   measure: count {
     type: count
     drill_fields: [parent_name]
+  }
+
+  measure: bundle_sales_1_day {
+    type: sum
+    sql: ${launch_sales1_day} ;;
+    value_format_name: usd
+  }
+
+  measure: bundle_sales_30_day {
+    type: sum
+    sql: ${launch_sales30_day} ;;
+    value_format_name: usd
+  }
+
+  measure: bundle_sales_60_day {
+    type: sum
+    sql: ${launch_sales60_day} ;;
+    value_format_name: usd
+  }
+
+  measure: bundle_sales_90_day {
+    type: sum
+    sql: ${launch_sales90_day} ;;
+    value_format_name: usd
+  }
+
+  measure: bundle_sales_lifetime {
+    type: sum
+    sql: ${launch_sales_lifetime} ;;
+    value_format_name: usd
+  }
+
+  measure: bundle_units_lifetime {
+    type: sum
+    sql: ${launch_units_lifetime} ;;
+    value_format_name: decimal_0
   }
 }
