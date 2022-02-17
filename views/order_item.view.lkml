@@ -2,6 +2,8 @@ view: order_item {
   sql_table_name: `infrastructure-162422.Majento.OrderItem`
     ;;
 
+  # Aaron was also here testing git hub
+
   dimension: order_id {
     type: string
     # hidden: yes
